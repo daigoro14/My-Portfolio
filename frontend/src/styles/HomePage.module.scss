@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montez&family=Righteous&family=Yellowtail&display=swap');
+
+
+.content {
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bayPhoto {
+    width: 400px;
+    border-radius: 40px;
+    margin-right: 20px;
+    box-shadow: -18px 12px 81px 5px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -18px 12px 81px 5px rgba(0,0,0,0.44);
+    -moz-box-shadow: -18px 12px 81px 5px rgba(0,0,0,0.44);
+}
+
+.header {
+    color: white;
+    font-size: 50px;
+    font-family: 'Righteous';
+}
+
+.summary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.signature{
+    font-size: 30px;
+}
+
+.summary p{
+    color: white;
+    // font-size: 28px;
+    width: 500px;
+    font-family: 'Righteous';
+}
