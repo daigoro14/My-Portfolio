@@ -4,12 +4,24 @@
 .topBar{
     background-color: rgba(22, 26, 26, 0.49);
     backdrop-filter: blur(10px);
-    position: relative;
+    position: fixed;
+    width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
+    transition: 0.3s;
+    z-index: 2;
 }
 
+
+
+.show {
+    top: 0;
+}
+
+.hide {
+    top: -100px;
+}
 
 .topBar a {
     padding: 18px;
@@ -30,10 +42,41 @@
 .navButtons {
     font-size: 21px;
     font-family: 'Righteous';
-
-    // font-family: sans-serif;
     position: absolute;
-    display: inline-block;
+    display: flex;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.navButtons a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 18px 0 18px;
+    border: 0px solid white;
+    transition: 0.1s;
+}
+
+
+
+.underLine{
+    border-radius: 1px;
+    transition: 0.3s;
+    margin-top: 2px;
+    background-color: rgb(90, 249, 114);
+    height: 2px;
+    width: 0%;
+}
+
+.navButtons a:hover {
+    .underLine {
+        background-color: white;
+        width: 100%;
+    }
+}
+
+.currPage {
+    background-color: white;
+    height: 2px;
+    width: 100%;
 }

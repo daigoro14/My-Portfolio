@@ -1,0 +1,122 @@
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@mixin slideAnimation {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+@mixin project{
+    width: 90%;
+    margin: 80px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin showBtn{
+    flex-basis: 100%;
+    border: none;
+    background-color: inherit;
+    font-size: 20px;
+    font-family: inherit;
+    color: white;
+    height: auto;
+    align-self: flex-end;
+    transition: 0.3s;
+}
+
+.content{
+    margin: 140px 0 100px 0;
+}
+
+.project1 {
+    animation-name: slideInLeft;
+    @include slideAnimation();
+    @include project();
+    .projectSvg {
+        height: 300px;
+        width: 300px;
+        margin-right: 20px;
+        svg{
+            width: 100%
+        }
+    }
+    .showHideBtn{
+        @include showBtn();
+        margin: 0 20px 0 auto;
+    }
+    
+    .showHideBtn:hover{
+        font-size: 22px;
+        margin-right: 16px;
+    }
+}
+
+.project2 {
+    @include project();
+    animation-name: slideInRight;
+    @include slideAnimation();
+    flex-direction: row-reverse;
+    text-align: end;
+    .projectSvg {
+        height: 300px;
+        width: 300px;
+        margin-left: 20px;
+        svg{
+            width: 100%
+        }
+    }
+    .showHideBtn{
+        @include showBtn();
+        width: 300px;
+    }
+    
+    .showHideBtn:hover{
+        font-size: 22px;
+        margin-left: 16px;
+    }
+}
+
+.projectInfo{
+    flex: 1;
+}
+
+.projectHeader {
+    color: white;
+    font-size: 48px;
+}
+
+.tags{
+    color: rgb(255, 255, 255);
+    word-spacing: 20px;
+}
+
+.projectDescription{
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}

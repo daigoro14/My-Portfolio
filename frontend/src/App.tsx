@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import "./styles/Global.scss"
 
 
 document.body.style.backgroundImage = "linear-gradient(to right, #4880EC, #019CAD)" 
