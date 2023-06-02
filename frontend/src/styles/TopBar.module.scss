@@ -80,3 +80,47 @@
     height: 2px;
     width: 100%;
 }
+
+.menuBurger{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .topBar{
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s;
+        z-index: 2;
+    }
+
+    .navButtons{
+        background-image: linear-gradient(to right, #487fec, #019cad) ;
+        // background-color: aliceblue;
+        // backdrop-filter: blur(5px);
+        position: fixed;
+        top: 100px;
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transition: 0.3s;
+    }
+
+    .hideMenu {
+        display: none;
+        opacity: 0;
+    }
+
+    .showMenu {
+        display: flex;
+        opacity: 1;
+
+    }
+
+    .menuBurger{
+        display: block;
+        padding: 18px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,138 @@
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@mixin slideAnimation {
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+
+@mixin about{
+    width: 90%;
+    margin: 80px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content{
+    text-align: center;
+    margin: 140px 0 100px 0;
+}
+
+
+
+.about1 {
+    animation-name: slideInRight;
+    @include slideAnimation();
+    @include about();
+    .aboutImg{
+        float: left;
+        margin-right: 25px;
+    }
+    .aboutHeader {
+        margin-left: 400px
+    }
+    .aboutDescription {
+        text-align: center;
+    }
+}
+
+.about2 {
+    @include about();
+    animation-name: slideInLeft;
+    @include slideAnimation();
+    flex-direction: row-reverse;
+    .aboutImg{
+        float: right;
+        margin-left: 25px;
+    }
+    .aboutHeader {
+        margin-right: 400px
+    }
+    .aboutDescription {
+        text-align: center;
+    }
+}
+
+.aboutImg {
+    width: 300px;
+    height: 300px;
+    border-radius: 25%;
+    object-fit: cover;
+    box-shadow: 5px 12px 52px -5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 5px 12px 52px -5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 5px 12px 52px -5px rgba(0,0,0,0.6);
+}
+
+.aboutInfo{
+    flex: 1;
+}
+
+.aboutHeader {
+    flex-basis: 100%;
+    color: white;
+    font-size: 48px;
+}
+
+.aboutDescription{
+    line-height: 1.4;
+    white-space: pre-line;
+    word-spacing: 1px;
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+}
+
+.aboutDescription::selection {
+    color: rgb(185, 255, 187);
+}
+
+@media (max-width: 900px) {
+    .about1 {
+        .aboutHeader {
+            margin-left: 0;
+        }
+        .aboutImg {
+            margin: auto;
+            margin-bottom: 30px;
+            display: block;
+            float: none;
+        }
+    }
+    
+    .about2 {
+        .aboutHeader {
+            margin-right: 0;
+        }
+        .aboutImg {
+            float: none;
+            display: block;
+            margin-bottom: 30px;
+        }
+    }
+}

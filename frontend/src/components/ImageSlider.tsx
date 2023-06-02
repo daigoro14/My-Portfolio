@@ -42,17 +42,6 @@ export default function ImageSlider(props: any) {
                 })
                 }
             </div>
-            <div className={style.slideshowDots}>
-                {slides.length > 1 && slides.map((_: any, idx: any) => (
-                <div
-                    key={idx}
-                    className={`${style.slideshowDot} ${index === idx ? style.activeDot : ""}`}
-                    onClick={() => {
-                        setIndex(idx);
-                        }}>
-                </div>
-                ))}
-            </div>
         </div>
         {slides.length > 1 && (
         <svg 
@@ -70,6 +59,18 @@ export default function ImageSlider(props: any) {
         </g>
         </svg>
         )}
+
+<div className={style.slideshowDots}>
+                {slides.length > 1 && slides.map((_: any, idx: any) => (
+                <div
+                    key={idx}
+                    className={`${style.slideshowDot} ${index === idx ? style.activeDot : ""}`}
+                    onClick={() => {
+                        setIndex(idx);
+                        }}>
+                </div>
+                ))}
+            </div>
     </div>
   )
 }
