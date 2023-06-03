@@ -36,6 +36,7 @@ export default function ImageSlider(props: any) {
                                 className={style.slideshowImg}
                                 key={index}
                                 src={slide}
+                                alt="project"
                             />
                         </div>
                     )
