@@ -70,7 +70,10 @@
 }
 
 @media (max-width: 1100px) {
+
+
     .content {
+        justify-content: space-evenly;
         width: 100%;
     }
     .contactOption {
