@@ -1,42 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Montez&family=Righteous&family=Yellowtail&display=swap');
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
 
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@mixin slideAnimation {
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
 
 .content {
+    animation-name: slideUp;
+    @include slideAnimation();
     margin-top: 100px;
     top: 100px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.bayPhoto {
-    width: 400px;
-    border-radius: 40px;
-    margin-right: 20px;
-    box-shadow: -18px 12px 81px 5px rgba(0,0,0,0.44);
-    -webkit-box-shadow: -18px 12px 81px 5px rgba(0,0,0,0.44);
-    -moz-box-shadow: -18px 12px 81px 5px rgba(0,0,0,0.44);
+.imgDiv {
+    position: relative;
+    svg{
+        width: 25%;
+        fill: white;
+        z-index: 2;
+        position: absolute;
+        right: 2%;
+        top: 2%;
+    }
 }
 
+.homeImg {
+    border: 13px solid  rgb(255, 255, 255);
+    background-image: linear-gradient(#48ec5850, #019cad76);
+    filter: brightness(90%);
+    width: 400px;
+    padding: 10px;
+    border-radius: 50%;      
+    margin-right: 20px;
+}
+
+
+
 .header {
+    animation-name: slideUp;
+    @include slideAnimation();
     color: white;
     font-size: 50px;
     font-family: 'Righteous';
 }
 
 .summary{
+    animation-name: slideUp;
+    @include slideAnimation();
+    animation-delay: 0.2s;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    
 }
 
 .signature{
-    font-size: 30px;
+    font-size: 36px !important;
 }
 
 .summary p{
-    color: white;
-    // font-size: 28px;
-    width: 500px;
-    font-family: 'Righteous';
+    text-align: center;
+    color: rgb(180, 240, 255);
+    font-size: 28px;
+}
+
+
+@media (max-width: 970px) {
+    .header{
+        text-align: center;
+    }
+    .summary{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+.imgDiv{
+    width: 350px;
+}
+
+    .homeImg {
+        margin: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .signature{
+        font-size: 32px !important;
+    }
 }

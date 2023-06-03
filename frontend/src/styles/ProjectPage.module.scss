@@ -114,8 +114,28 @@
 }
 
 .projectDescription{
+    
     line-height: 1.3;
 
     font-size: 24px;
     color: rgb(0, 0, 0);
+}
+
+.gitLink {
+    margin: 80px auto 0 auto;
+    width: 90%;
+    text-decoration: none;
+    p {
+        line-height: 1.3;
+        font-size: 21px;
+    }
+    svg {
+        position: relative;
+        top: 6px;
+        width: 27px;
+        height: 27px;
+    }
+    a {
+        color: black;
+    }
 }

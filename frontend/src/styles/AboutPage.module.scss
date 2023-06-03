@@ -23,6 +23,7 @@
     }
 }
 
+
 @mixin slideAnimation {
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
@@ -45,10 +46,25 @@
     margin: 140px 0 100px 0;
 }
 
-
+.aboutIntro {
+    font-weight: 700;
+    font-family: 'Josefin Sans';
+    text-align: left;
+    border: 3px solid rgba(10, 55, 114, 0.086);
+    color: rgb(180, 240, 255);
+    animation-name: slideInRight;
+    @include slideAnimation();
+    width: 70%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 30px;
+    line-height: 1.5;
+    font-size: 28px;
+    background-color: rgba(0, 0, 0, 0.113);
+}
 
 .about1 {
-    animation-name: slideInRight;
+    animation-name: slideInLeft;
     @include slideAnimation();
     @include about();
     .aboutImg{
@@ -59,13 +75,13 @@
         margin-left: 400px
     }
     .aboutDescription {
-        text-align: center;
+        text-align: left;
     }
 }
 
 .about2 {
     @include about();
-    animation-name: slideInLeft;
+    animation-name: slideInRight;
     @include slideAnimation();
     flex-direction: row-reverse;
     .aboutImg{
@@ -76,7 +92,7 @@
         margin-right: 400px
     }
     .aboutDescription {
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -101,15 +117,18 @@
 }
 
 .aboutDescription{
+    font-weight: 700;
+    font-family: 'Josefin Sans';
     line-height: 1.4;
     white-space: pre-line;
     word-spacing: 1px;
     font-size: 26px;
-    color: rgb(0, 0, 0);
+    // color: rgb(0, 0, 0);
+    color: rgb(180, 240, 255);
 }
 
 .aboutDescription::selection {
-    color: rgb(185, 255, 187);
+    color: rgb(247, 215, 170);
 }
 
 @media (max-width: 900px) {
@@ -130,6 +149,7 @@
             margin-right: 0;
         }
         .aboutImg {
+            margin: auto;
             float: none;
             display: block;
             margin-bottom: 30px;
