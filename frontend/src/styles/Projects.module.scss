@@ -1,23 +1,11 @@
-@keyframes slideInLeft {
+@keyframes slideUp {
     from {
-        transform: translateX(-300px);
+        transform: translateY(50px);
         opacity: 0;
     }
 
     to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(300px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -25,7 +13,7 @@
 @mixin slideAnimation {
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-delay: 0;
+    animation-delay: 0.2.5s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: both;
@@ -46,18 +34,24 @@
     font-family: inherit;
     color: white;
     height: 30px;
-    align-self: flex-end;
     transition: 0.3s;
 }
 
 .content{
+    animation-name: slideUp;
+    @include slideAnimation();
     text-align: center;
-    margin: 140px 0 100px 0;
+    margin: 90px 0 100px 0;
+}
+
+.heading {
+    position: relative;
+    top: 30px;
+    color: white;
+    font-size: 90px
 }
 
 .project1 {
-    animation-name: slideInLeft;
-    @include slideAnimation();
     @include project();
     .projectSvg {
         height: 300px;
@@ -78,8 +72,6 @@
 
 .project2 {
     @include project();
-    animation-name: slideInRight;
-    @include slideAnimation();
     flex-direction: row-reverse;
     // text-align: end;
     .projectSvg {
@@ -137,5 +129,21 @@
     }
     a {
         color: black;
+    }
+}
+
+@media (max-width: 900px) {
+    @mixin project {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project1 {
+        @include project;
+    }
+
+    .project2 {
+        @include project;
     }
 }

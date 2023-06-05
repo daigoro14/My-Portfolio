@@ -4,7 +4,7 @@ import skate from '../photos/Me/skate.png'
 const about = [
     {
         title: "Studies",
-        description: `I studied "Webb Developer Full-Stack Open Source" at Nackademin in Stockholm, Sweden. I was highly impressed by the quality of this course but also with the patience of the instructors. 
+        description: `I studied "Web Developer Full-Stack Open Source" at Nackademin in Stockholm, Sweden. I was highly impressed by the quality of this course but also with the patience of the instructors. 
         
         The teachers, who were experienced professionals from the industry, provided the most up-to-date knowledge available in the market.
 

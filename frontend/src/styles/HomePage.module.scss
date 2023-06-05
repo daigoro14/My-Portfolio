@@ -44,10 +44,10 @@
 }
 
 .homeImg {
-    border: 13px solid  rgb(255, 255, 255);
+    border: 10px solid  rgb(255, 255, 255);
     background-image: linear-gradient(#48ec5850, #019cad76);
     filter: brightness(90%);
-    width: 400px;
+    width: 200px;
     padding: 10px;
     border-radius: 50%;      
     margin-right: 20px;
@@ -69,7 +69,7 @@
     animation-delay: 0.2s;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     
 }
@@ -78,10 +78,55 @@
     font-size: 36px !important;
 }
 
+.summaryInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .summary p{
+    margin: 30px 0 30px 0;
     text-align: center;
     color: rgb(180, 240, 255);
     font-size: 28px;
+}
+
+.logos {
+    height: 80px;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 5px;
+    // background-color: rgba(219, 244, 253, 0.873);
+    background-color: rgba(6, 60, 80, 0.774);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    svg {
+
+        flex-basis: calc(20% - 10px);
+        fill: rgb(23, 21, 44);
+        transition: 0.3s;
+        margin: 0 auto 0 auto;
+        width: 30px !important;
+        height: 30px;
+    }
+    svg:hover {
+        opacity: 1;
+    }
+}
+
+.mysqlLogo {
+    padding: 0;
+    margin: 0;
+    transform-origin: 0px 0px;
+    background-color: white;
+    // position: relative;
+    width: 30px !important;
+    height: 30px;
 }
 
 

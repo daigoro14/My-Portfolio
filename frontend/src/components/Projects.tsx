@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import TopBar from '../components/TopBar'
-import ImageSlider from '../components/ImageSlider'
+import ImageSlider from './ImageSlider'
 import projects from '../data/projectInfo'
-import style from "../styles/ProjectPage.module.scss"
+import style from "../styles/Projects.module.scss"
 
 
-export default function ProjectPage() {
+export default function Projects() {
 
   
   const [showSlide, setShowSlide] = useState<Number | null>(null)
@@ -13,8 +12,8 @@ export default function ProjectPage() {
 
   return (
     <div>
-        <TopBar page={"project"} />
         <div className={style.content}>
+          <span className={style.heading}>Projects</span>
           {projects.map((project, index) => (
             <div className={index % 2 === 0 ? style.project1 : style.project2}>
               <div className={style.projectSvg} dangerouslySetInnerHTML={{ __html: project.svg}}></div>

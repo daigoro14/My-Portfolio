@@ -18,13 +18,17 @@
     animation-fill-mode: both;
 }
 
-.content{
+.content {
+    margin-bottom: 50px;
+}
+
+.links{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 40%;
     height: calc(100vh - 240px);
-    margin: 140px auto 100px auto;
+    margin: 140px auto 20px auto;
 }
 
 .contactOption{
@@ -35,20 +39,22 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
     svg {
         width: 50px;
         height: 50px;
     }
-    a {
+    a, span{
         transition: 0.3s;
         text-decoration: none;
         color: black;
+        cursor: pointer;
         margin: auto;
         font-size: 30px;
     }
 
     
-    a:hover{
+    a:hover, span:hover{
         color: rgb(173, 230, 146);
     }
 }
@@ -69,14 +75,110 @@
     animation-delay: 0.2s;
 }
 
+.showForm {
+    display: flex;
+}
+
+.hideForm {
+    display: none;
+}
+
+.contactForm {
+    color: rgb(180, 240, 255);
+    text-align: center;
+    margin: 0 auto 0 auto;
+    width: 40%;
+    // display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    span {
+        color: black;
+        font-size: 30px;
+        margin-bottom: 20px;
+        flex-basis: 100%;
+    }
+
+    label {
+        flex-basis: 40%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        height: 20px;
+        width: 100%;
+        border: 2px solid rgb(33, 105, 173);
+        border-radius: 15px;
+        padding: 0 5px 0 5px;
+    }
+    input:focus-visible {
+        outline: none;
+    }
+
+    .msgTextarea {
+        margin: 10px 0 20px 0;
+        flex-basis: 100%;
+        textarea {
+            padding: 4px;
+            height: 90px;
+            width: 100%;
+            border: 2px solid rgb(33, 105, 173);
+            border-radius: 8px;
+            resize: none;
+        }
+    }
+
+    textarea:focus-visible {
+        outline: none;
+    }
+
+}
+
+.sendButton {
+    background-color: inherit;
+    border: 3px solid rgb(180, 240, 255);
+    border-radius: 25px;
+    color: rgb(180, 240, 255);
+    font-size: 20px;
+    font-family: 'Righteous';
+    height: 40px;
+    width: 100px;
+    transition: 0.3s;
+}
+
+.sendButton:hover {
+    height: 42px;
+    width: 110px;
+    color: white;
+    border: 3px solid white;
+}
+
 @media (max-width: 1100px) {
 
-
     .content {
-        justify-content: space-evenly;
+        margin-bottom: 150px;
+    }
+
+    .contactForm {
+        label {
+            margin-top: 15px;
+        }
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .links {
         width: 100%;
+
     }
     .contactOption {
-        flex-direction: column;
+        a, span {
+            font-size: 28px;
+        }
     }
 }
