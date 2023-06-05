@@ -21,6 +21,8 @@
 }
 
 .content {
+    overflow-x: hidden;
+    overflow-y: hidden;
     animation-name: slideUp;
     @include slideAnimation();
     margin-top: 100px;

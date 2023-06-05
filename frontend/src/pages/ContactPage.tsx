@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import TopBar from '../components/TopBar'
 import style from '../styles/ContactPage.module.scss'
 import emailjs from '@emailjs/browser'
@@ -12,6 +12,19 @@ export default function ContactPage() {
 
 
   const [showForm, setShowForm] = useState(false)
+
+
+  useEffect(() => {
+    window.scroll({
+      top: document.documentElement.scrollHeight || document.body.scrollHeight,
+      behavior: 'smooth', // optional: smooth scrolling effect
+    });
+  }, [showForm]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   function sendEmail(e: any) {
     e.preventDefault()
@@ -56,8 +69,11 @@ export default function ContactPage() {
                 </g>
             </g>
         </svg>
-        {/* <a href="mailto: daigoropersson@gmail.com"  rel="noreferrer" target="_blank">daigoropersson@gmail.com</a> */}
         <span onClick={() => {showForm ? setShowForm(false) : setShowForm(true)}}>daigoropersson@gmail.com</span>
+
+        <svg onClick={() => {showForm ? setShowForm(false) : setShowForm(true)}} className={`${style.arrow} ${showForm ? style.arrowUp : style.arrowDown}`} viewBox="0 0 251 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1599 15.7161L70.291 77.9153L124.292 138.84C124.643 139.236 124.819 139.434 125.019 139.522C125.276 139.635 125.568 139.635 125.825 139.522C126.025 139.434 126.201 139.236 126.552 138.84L235.684 15.7161" stroke="black" stroke-width="30" stroke-linecap="round"/>
+        </svg>
 
       </>
     }
@@ -76,7 +92,7 @@ export default function ContactPage() {
           ))}
         </div>
         <form onSubmit={sendEmail} className={`${showForm ? style.showForm : style.hideForm} ${style.contactForm}`}>
-          <span>Email right away!</span>
+          <span>Contact Daigoro!</span>
           <label htmlFor="name">Name <input name="name" type="name" placeholder='Name'/></label>
 
           <label htmlFor="email">Email <input name="email" type="email" placeholder='example@email.com' /></label>

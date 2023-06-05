@@ -19,6 +19,7 @@
 }
 
 .content {
+    overflow-x: hidden;
     margin-bottom: 50px;
 }
 
@@ -27,7 +28,7 @@
     flex-direction: column;
     justify-content: space-around;
     width: 40%;
-    height: calc(100vh - 240px);
+    height: calc(100vh - 220px);
     margin: 140px auto 20px auto;
 }
 
@@ -73,6 +74,30 @@
 
 .contact3 {
     animation-delay: 0.2s;
+}
+
+.arrow {
+    transition: 0.3s;
+    margin-top: 30px;
+    width: 25px !important;
+    height: 25px !important;
+    path {
+        transition: 0.3s;
+    }
+}
+
+
+.arrow:hover path {
+    stroke: rgb(180, 240, 255);
+ 
+}
+
+.arrowUp{
+    transform: rotate(-180deg);
+}
+
+.arrowDown{
+    transform: rotate(0deg);
 }
 
 .showForm {
