@@ -1,26 +1,26 @@
 // Language Notes Images
-import lng1 from '../photos/languageNotes/login.png'
-import lng2 from '../photos/languageNotes/allNotes.png'
-import lng3 from '../photos/languageNotes/mandarin.png'
-import lng4 from '../photos/languageNotes/slideshow.png'
+import lng1 from '../photos/languageNotes/login.webp'
+import lng2 from '../photos/languageNotes/allNotes.webp'
+import lng3 from '../photos/languageNotes/mandarin.webp'
+import lng4 from '../photos/languageNotes/slideshow.webp'
 
 // Ploteye Image
-import ploteyeImg from '../photos/Ploteye/ploteye.png'
+import ploteyeImg from '../photos/Ploteye/ploteye.webp'
 
 // Social Media Images
-import scl1 from '../photos/socialMedia/createPost.png'
-import scl2 from '../photos/socialMedia/editProfile.png'
-import scl3 from '../photos/socialMedia/profile.png'
-import scl4 from '../photos/socialMedia/signup.png'
-import scl5 from '../photos/socialMedia/login.png'
+import scl1 from '../photos/socialMedia/createPost.webp'
+import scl2 from '../photos/socialMedia/editProfile.webp'
+import scl3 from '../photos/socialMedia/profile.webp'
+import scl4 from '../photos/socialMedia/signup.webp'
+import scl5 from '../photos/socialMedia/login.webp'
 
 // Chat App Images
-import cht1 from '../photos/chatApp/Login.png'
-import cht2 from '../photos/chatApp/Chat.png'
+import cht1 from '../photos/chatApp/Login.webp'
+import cht2 from '../photos/chatApp/Chat.webp'
 
 // Booking Schedule Images
-import book1 from '../photos/bookingSchedule/lightmode.png'
-import book2 from '../photos/bookingSchedule/darkmode.png'
+import book1 from '../photos/bookingSchedule/lightmode.webp'
+import book2 from '../photos/bookingSchedule/darkmode.webp'
 
 
 const projects = [

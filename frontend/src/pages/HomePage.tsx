@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import TopBar from '../components/TopBar'
 import style from '../styles/HomePage.module.scss'
-import portrait from '../photos/Me/selfportrait.png'
+import portrait from '../photos/Me/selfportrait.webp'
 import Projects from '../components/Projects'
 
 

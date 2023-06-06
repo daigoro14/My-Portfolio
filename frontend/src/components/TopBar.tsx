@@ -24,7 +24,7 @@ export default function TopBar(props: any) {
   return (
     <>
       <div className={`${style.topBar} ${navBar}`}>
-        <span className={style.homeButton}>Daigoro</span>
+        <Link to="/" className={style.homeButton}>Daigoro</Link>
 
         <svg 
           className={style.menuBurger}

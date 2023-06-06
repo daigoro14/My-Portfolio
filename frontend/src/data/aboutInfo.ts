@@ -1,5 +1,5 @@
-import graduation from '../photos/Me/graduation.png'
-import skate from '../photos/Me/skate.png'
+import graduation from '../photos/Me/graduation.webp'
+import skate from '../photos/Me/skate.webp'
 
 const about = [
     {
